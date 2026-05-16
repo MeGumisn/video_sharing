@@ -1,16 +1,13 @@
 use axum::{
-    body::Body,
     extract::Query,
-    http::{header, StatusCode},
-    response::{IntoResponse, Json, Response},
+    http::StatusCode,
+    response::Json,
 };
 use serde::{Deserialize, Serialize};
 use std::path::{Path, PathBuf};
-use tokio::fs::{self, File};
-use tokio_util::io::ReaderStream;
+use tokio::fs::{self};
 // 引入静态文件服务组件
 
-pub const VIDEO_ROOT: &str = "F:\\迅雷下载\\Animate";
 const CONFIG_FILE: &str = "config.json";
 
 #[derive(Deserialize, Debug)]

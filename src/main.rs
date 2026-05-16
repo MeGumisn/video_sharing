@@ -1,4 +1,4 @@
-use crate::video_play::{get_video_root, read_conf};
+use crate::video_play::read_conf;
 use axum::routing::get;
 use axum::Router;
 use std::path::Path;
