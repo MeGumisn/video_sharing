@@ -3,7 +3,13 @@ name = "video_sharing"
 version = "0.1.0"
 edition = "2024"
 
-[target.release]
+[profile.release]
+lto = true
+strip = true
+opt-level = 3
+panic = "abort"
+codegen-units = 1
+debug = "none"
 
 [dependencies]
 axum = "0.8.9"
